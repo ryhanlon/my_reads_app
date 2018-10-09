@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './LibraryPage.css';
 import Shelf from '../Shelf/Shelf.js';
+import SearchIcon from '../SearchIcon/SearchIcon';
 
 
 class LibraryPage extends Component {
@@ -15,14 +16,16 @@ class LibraryPage extends Component {
 
 				<div className="list-books-content">
 
-					<Shelf/>
-					<Shelf/>
-					<Shelf/>
+					<Shelf shelfName="Currenlty Reading"/>
+					<Shelf shelfName="Want to Read"/>
+					<Shelf shelfName="Read"/>
 
 				</div>
 
 				<div className="open-search">
-					<a onClick={() => this.setState({ showSearchPage: true })}>Add a book</a>
+
+					<SearchIcon/>
+
 				</div>
 
           </div>
