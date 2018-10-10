@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import './SearchIcon.css';
+import { Link } from 'react-router-dom';
 
 
 class SearchIcon extends Component {
 
 	render() {
 
-		return <a onClick={() => this.setState({ showSearchPage: true })}>Add a book</a>
+		return <Link to="/searchPage">Add a book</Link>
 
 	}
 }

@@ -27,10 +27,11 @@ To start up the server
 - CSS Grid, Flexbox and Media Queries used to build the _responsive features_.
 - JavaScript (ECMASript 6) and React are used for user interactions which include:
     -
--  []()
+- *Tutorial Request: FEND Project 6 - Walk Through (Short)* by Ryan Waite, [video](https://www.youtube.com/watch?v=N8bU1oWlLwY&feature=youtu.be
+)
 
 
-
+- CSS for animations [w3schools]("https://www.w3schools.com/css/css3_animations.asp")
 
 #### Picture of Data and Components Breakdown
 ![breakdown](./docs/images/myReadAppOutline.jpg)
@@ -55,3 +56,5 @@ To start up the server
 
 ### Future Features
 -
+
+

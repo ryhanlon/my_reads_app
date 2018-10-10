@@ -5,6 +5,15 @@ import ReturnIcon from '../ReturnIcon/ReturnIcon';
 
 
 class SearchPage extends Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			books: [],
+			results: [],
+			query: ""
+		}
+	}
 
 	render() {
 		return (

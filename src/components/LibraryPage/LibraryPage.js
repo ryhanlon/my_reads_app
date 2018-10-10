@@ -5,6 +5,13 @@ import SearchIcon from '../SearchIcon/SearchIcon';
 
 
 class LibraryPage extends Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			books: []
+		}
+	}
 
 	render() {
 		return (
@@ -16,8 +23,10 @@ class LibraryPage extends Component {
 
 				<div className="list-books-content">
 
-					<Shelf shelfName="Currenlty Reading"/>
+					<Shelf shelfName="Currently Reading"/>
+
 					<Shelf shelfName="Want to Read"/>
+
 					<Shelf shelfName="Read"/>
 
 				</div>

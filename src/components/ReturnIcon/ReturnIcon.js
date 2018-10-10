@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import './ReturnIcon.css';
+import {Link} from "react-router-dom";
 
 
 class ReturnIcon extends Component {
 	render() {
 
-		return <a className="close-search" onClick={() => this.setState({showSearchPage: false})}>Close</a>
+		return <Link to="/" className="close-search">Close</Link>
 
 	}
 }
