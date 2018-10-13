@@ -47,7 +47,7 @@ class SearchPage extends Component {
 				< div className = "search-books-results" >
 
 					{
-                  	this.state.results.map(resultsData => {
+                  	this.state.results && this.state.results.map(resultsData => {
                   		return <Books book={resultsData} key={resultsData.id} />
 					} )
 
