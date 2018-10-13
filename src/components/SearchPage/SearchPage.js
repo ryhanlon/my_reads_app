@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './SearchPage.css';
-import Input from '../Input/Input.js';
+import * as BooksAPI from '../../BooksAPI';
+import Books from "../Books/Books.js";
 import ReturnIcon from '../ReturnIcon/ReturnIcon';
 
 
@@ -11,8 +12,17 @@ class SearchPage extends Component {
 		this.state = {
 			books: [],
 			results: [],
-			query: ""
+			query: ''
 		}
+	}
+
+	updateQuery = (query) => {
+		this.setState({ query: query.trim() }, this.getResults)
+	}
+
+
+	getResults = () => {
+		BooksAPI.search(this.state.query).then(searchData => this.setState ( { results: searchData}, console.log(this.state.results) ))
 	}
 
 	render() {
@@ -22,13 +32,27 @@ class SearchPage extends Component {
 				<div className="search-books-bar">
 
 					<ReturnIcon/>
-					<Input/>
+
+					<div className="search-books-input-wrapper">
+						<input
+							type="text"
+							placeholder="Search by title or author"
+							value={this.state.query}
+							onChange={(event) => this.updateQuery(event.target.value)}
+						/>
+					</div>
 
 				</div>
 
-				< div
-				className = "search-books-results" >
-					< ol className = "books-grid" > </ol>
+				< div className = "search-books-results" >
+
+					{
+                  	this.state.results.map(resultsData => {
+                  		return <Books book={resultsData} key={resultsData.id} />
+					} )
+
+                  	}
+
 				</div>
 			</div>
 

@@ -18,8 +18,6 @@ class LibraryPage extends Component {
 		BooksAPI.getAll().then(bookData => this.setState( { books: bookData} ))
 	}
 
-
-
 	render() {
 		console.log(this.state.books);
 		return (
