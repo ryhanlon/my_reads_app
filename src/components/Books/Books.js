@@ -24,7 +24,7 @@ class Books extends Component {
 
 							<div className="book-title">{this.props.book.title}</div>
 
-                          <div className="book-authors">{this.props.book.authors}</div>
+                          <div className="book-authors">{!this.props.book.authors ? '' : this.props.book.authors}</div>
                         </div>
                       </li>
                     </ol>

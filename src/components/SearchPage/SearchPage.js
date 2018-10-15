@@ -22,7 +22,7 @@ class SearchPage extends Component {
 
 	getResults = () => {
 		if (this.state.query === '' || this.state.query === 'undefined') {
-			return this.setState( {results: [''] } );
+			return this.setState( {results: [] } );
 		}
 		BooksAPI.search(this.state.query.trim())
 			.then(response => {
