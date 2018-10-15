@@ -17,13 +17,22 @@ class SearchPage extends Component {
 	}
 
 	updateQuery = (query) => {
-		this.setState({ query: query.trim() }, this.getResults)
-	}
-
+		this.setState({ query: query }, this.getResults)
+	};
 
 	getResults = () => {
-		BooksAPI.search(this.state.query).then(searchData => this.setState ( { results: searchData}, console.log(this.state.results) ))
-	}
+		if (this.state.query === '' || this.state.query === 'undefined') {
+			return this.setState( {results: [''] } );
+		}
+		BooksAPI.search(this.state.query.trim())
+			.then(response => {
+				if (response.error) {
+				return this.setState( { result: [] } );
+			} else {
+				return this.setState ( { results: response}, console.log(this.state.results) )
+				}
+			})
+	};
 
 	render() {
 		return (
