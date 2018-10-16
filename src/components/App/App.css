@@ -27,6 +27,9 @@ body, .app {
 }
 
 .bookshelf {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   padding: 0 10px 20px;
 }
 
@@ -37,6 +40,7 @@ body, .app {
 }
 
 .bookshelf-title {
+  width: 100vw;
   border-bottom: 1px solid #dedede;
 }
 .bookshelf-books {
@@ -100,6 +104,9 @@ body, .app {
 }
 
 .search-books-results {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   padding: 80px 10px 20px;
 }
 

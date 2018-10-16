@@ -16,6 +16,10 @@ class SearchPage extends Component {
 		}
 	}
 
+	componentDidMount() {
+		BooksAPI.getAll().then(bookData => this.setState( { books:bookData } ))
+	}
+
 	updateQuery = (query) => {
 		this.setState({ query: query }, this.getResults)
 	};
