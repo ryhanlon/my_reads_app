@@ -8,12 +8,12 @@ class ShelfControl extends Component {
 		return (
 
 			<div className="book-shelf-changer">
-				<select>
-				<option value="move" disabled>Move to...</option>
-				<option value="currentlyReading">Currently Reading</option>
-				<option value="wantToRead">Want to Read</option>
-				<option value="read">Read</option>
-				<option value="none">None</option>
+				<select value={this.props.shelfData.shelf} id={this.props.shelfData.id}>
+					<option value="move" disabled>Move to...</option>
+					<option value="currentlyReading">Currently Reading</option>
+					<option value="wantToRead">Want to Read</option>
+					<option value="read">Read</option>
+					<option value="none">None</option>
 				</select>
 			</div>
 		)
