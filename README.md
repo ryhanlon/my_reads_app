@@ -19,19 +19,38 @@ Click [here](#pictures-of-responsive-design) to see pictures of the website's Re
 
 ##### Start-up Server
 
-To start up the server
+To run the server, NPM or Yarn must be installed.
+
+Open up the terminal and go to the project directory.  Inside of the project directory, run:
+
+`npm start`
+
+If you have Yarn installed run:
+
+`yarn start`
+
+This project was built using *Create React App*.  For complete technical details click [Create React App](./docs/README.md)
 
 
 
 ##### Technical Components
 - CSS Grid, Flexbox and Media Queries used to build the _responsive features_.
-- JavaScript (ECMASript 6) and React are used for user interactions which include:
+- JavaScript (ECMASript 6)
+- React 16.5.2
     -
-- *Tutorial Request: FEND Project 6 - Walk Through (Short)* by Ryan Waite, [video](https://www.youtube.com/watch?v=N8bU1oWlLwY&feature=youtu.be
-)
 
 
-- CSS for animations [w3schools]("https://www.w3schools.com/css/css3_animations.asp")
+
+
+##### Articles and Tutorials
+**notes**:
+
+Used the following tutorials, articles and docs while building this app.
+
+- *Tutorial Request: FEND Project 6 - Walk Through (Short)* by Ryan Waite, [video](https://www.youtube.com/watch?v=N8bU1oWlLwY&feature=youtu.be)
+- React Docs
+    - [The Select Tab](https://reactjs.org/docs/forms.html#the-select-tag)
+    - [Handling Events](https://reactjs.org/docs/handling-events.html)
 
 #### Picture of Data and Components Breakdown
 ![breakdown](./docs/images/myReadAppOutline.jpg)
