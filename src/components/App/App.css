@@ -143,14 +143,14 @@ body, .app {
 .book-top {
   position: relative;
   height: 200px;
-  display: flex;
-  align-items: flex-end;
+  /*display: flex;*/
+  /*align-items: flex-end;*/
 }
 
 .book-shelf-changer {
   position: absolute;
   right: 0;
-  bottom: -10px;
+  bottom: 17px;
   width: 40px;
   height: 40px;
   border-radius: 50%;

@@ -8,7 +8,10 @@ class ShelfControl extends Component {
 		return (
 
 			<div className="book-shelf-changer">
-				<select value={this.props.shelfData.shelf} id={this.props.shelfData.id}>
+				<select
+					value={this.props.book.shelf || "none"}
+					id={this.props.book.id}
+					onChange={(event) => {this.props.updateBook(this.props.book, event.target.value) }}>
 					<option value="move" disabled>Move to...</option>
 					<option value="currentlyReading">Currently Reading</option>
 					<option value="wantToRead">Want to Read</option>

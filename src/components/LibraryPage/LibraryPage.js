@@ -6,7 +6,7 @@ import * as BooksAPI from '../../BooksAPI';
 
 
 class LibraryPage extends Component {
-	constructor(props) {
+		constructor(props) {
 		super(props);
 
 		this.state = {
@@ -15,11 +15,26 @@ class LibraryPage extends Component {
 	}
 
 	componentDidMount() {
-		BooksAPI.getAll().then(bookData => this.setState( { books: bookData} ))
-	}
+		BooksAPI.getAll()
+				.then(resp =>
+					this.setState( {
+						books: resp,
+					}))
+				.then(console.log(this.state.books))
+		}
+
+	updateBook = (book, shelf) => {
+	BooksAPI.update(book, shelf)
+		.then(resp => {
+			console.log(resp);
+			book.shelf = shelf;
+			this.setState( state => ({
+				books: state.books.filter(b => b.id !== book.id).concat([book])
+				}));
+		});
+	};
 
 	render() {
-		console.log(this.state.books);
 		return (
 			<div className="list-books">
 
@@ -29,15 +44,18 @@ class LibraryPage extends Component {
 
 				<div className="list-books-content">
 
-					<Shelf shelfName="Currently Reading"
+					<Shelf updateBook={this.updateBook}
+						   shelfName="Currently Reading"
 						   shelfData={this.state.books.filter(book => book.shelf === "currentlyReading")}
 					/>
 
-					<Shelf shelfName="Want to Read"
+					<Shelf updateBook={this.updateBook}
+						   shelfName="Want to Read"
 						   shelfData={this.state.books.filter(book => book.shelf === "wantToRead")}
 					/>
 
-					<Shelf shelfName="Read"
+					<Shelf updateBook={this.updateBook}
+						   shelfName="Read"
 						   shelfData={this.state.books.filter(book => book.shelf === "read")}
 					/>
 

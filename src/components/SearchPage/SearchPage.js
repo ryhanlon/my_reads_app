@@ -16,8 +16,14 @@ class SearchPage extends Component {
 		}
 	}
 
-	componentDidMount() {
-		BooksAPI.getAll().then(bookData => this.setState( { books:bookData } ))
+	componentDidMount () {
+		BooksAPI.getAll()
+		.then(resp =>
+			this.setState( {
+				books: resp,
+			}))
+		.then(console.log(this.state.books))
+
 	}
 
 	updateQuery = (query) => {
@@ -33,9 +39,27 @@ class SearchPage extends Component {
 				if (response.error) {
 				return this.setState( { result: [] } );
 			} else {
+				response.forEach(b => {
+					let find = this.state.books.filter(B => B.id === b.id);
+					if(find[0]) {
+						console.log('match');
+						b.shelf = find[0] ? find[0].shelf : null;
+					}
+				});
 				return this.setState ( { results: response}, console.log(this.state.results) )
 				}
-			})
+			});
+	};
+
+	updateBook = (book, shelf) => {
+	BooksAPI.update(book, shelf)
+		.then(resp => {
+			console.log(resp);
+			book.shelf = shelf;
+			this.setState( state => ({
+				books: state.books.filter(b => b.id !== book.id).concat([book])
+				}));
+		});
 	};
 
 	render() {
@@ -60,15 +84,13 @@ class SearchPage extends Component {
 				< div className = "search-books-results" >
 
 					{
-                  	this.state.results && this.state.results.map(resultsData => {
-                  		return <Books book={resultsData} key={resultsData.id} />
-					} )
-
+                  	this.state.results.map((item, key) => <Books updateBook={this.updateBook}
+								      book={item}
+									  key={key}/>)
                   	}
 
 				</div>
 			</div>
-
 		)
 	}
 }

@@ -4,9 +4,11 @@ import Books from "../Books/Books.js";
 
 
 class Shelf extends Component {
+	componentDidMount() {
+		console.log(this);
+	}
 
 	render() {
-		console.log(this.props.shelfData);
 		return (
 		    <div>
 
@@ -14,11 +16,10 @@ class Shelf extends Component {
                   <h2 className="bookshelf-title">{this.props.shelfName}</h2>
 
                   {
-                  	this.props.shelfData.map(bookData => {
-                  		return <Books book={bookData} key={bookData.id} />
-					} )
+                  	this.props.shelfData.map((book, key) => <Books updateBook={this.props.updateBook} book={book} key={key}/>)
+					}
 
-                  }
+
 
                 </div>
 
