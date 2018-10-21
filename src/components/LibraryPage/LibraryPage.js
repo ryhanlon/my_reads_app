@@ -61,11 +61,7 @@ class LibraryPage extends Component {
 
 				</div>
 
-				<div className="open-search">
-
-					<SearchIcon/>
-
-				</div>
+				<SearchIcon/>
 
           </div>
 		)

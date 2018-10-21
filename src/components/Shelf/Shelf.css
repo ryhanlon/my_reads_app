@@ -1,0 +1,19 @@
+/*===== book shelf =====*/
+.bookshelf {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 10px 20px;
+}
+
+.bookshelf-title {
+    width: 100vw;
+    border-bottom: 1px solid #dedede;
+}
+
+/*===== media query =====*/
+@media (min-width: 600px) {
+    .bookshelf {
+        padding: 0 20px 40px;
+    }
+}

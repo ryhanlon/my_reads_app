@@ -23,6 +23,8 @@ To run the server, NPM or Yarn must be installed.
 
 Open up the terminal and go to the project directory.  Inside of the project directory, run:
 
+`npm install`
+
 `npm start`
 
 If you have Yarn installed run:

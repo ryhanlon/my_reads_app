@@ -6,9 +6,13 @@ import { Link } from 'react-router-dom';
 class SearchIcon extends Component {
 
 	render() {
+		return (
 
-		return <Link to="/searchPage">Add a book</Link>
+			<div className="open-search">
+				<Link to="/searchPage">Add a book</Link>
+			</div>
 
+		)
 	}
 }
 
