@@ -18,9 +18,8 @@ class SearchPage extends Component {
 
 	componentDidMount () {
 		BooksAPI.getAll()
-		.then(resp =>
-			this.setState( {
-				books: resp,
+		.then(resp => this.setState( {
+				books: resp
 			}))
 		.then(console.log(this.state.books))
 
@@ -39,11 +38,17 @@ class SearchPage extends Component {
 				if (response.error) {
 				return this.setState( { result: [] } );
 			} else {
-				response.forEach(b => {
-					let find = this.state.books.filter(B => B.id === b.id);
-					if(find[0]) {
-						console.log('match');
-						b.shelf = find[0] ? find[0].shelf : null;
+				response.forEach(respBook => {
+					// console.log(respBook);
+					// Comparing the response books to the state.books, looking for matches
+					let findMatch = this.state.books.filter(B => B.id === respBook.id);
+					// Accessing object in findMatch array at 0 index
+					if(findMatch[0]) {
+						// console.log('match');
+						// If the book matches, update the shelf to match state.books menu
+						respBook.shelf = findMatch[0] ? findMatch[0].shelf : null;
+						// console.log(findMatch);
+
 					}
 				});
 				return this.setState ( { results: response}, console.log(this.state.results) )

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-// import PropTypes from 'prop-types';
 // import logo from './logo.svg';
 import './App.css';
 import SearchPage from '../SearchPage/SearchPage.js';

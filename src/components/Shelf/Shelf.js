@@ -10,20 +10,16 @@ class Shelf extends Component {
 
 	render() {
 		return (
-		    <div>
 
-                <div className="bookshelf">
-                  <h2 className="bookshelf-title">{this.props.shelfName}</h2>
+                <section className="bookshelf">
+                    <h2 className="bookshelf-title">{this.props.shelfName}</h2>
 
-                  {
-                  	this.props.shelfData.map((book, key) => <Books updateBook={this.props.updateBook} book={book} key={key}/>)
-					}
+                    {
+                  	    this.props.shelfData.map((book, key) => <Books updateBook={this.props.updateBook} book={book} key={key} />)
+                    }
 
+                </section>
 
-
-                </div>
-
-              </div>
 		)
 	}
 }

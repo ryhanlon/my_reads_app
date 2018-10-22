@@ -17,7 +17,7 @@ class Books extends Component {
 								<div className="book-cover" style={{
 									width: 128,
 									height: 174,
-									backgroundImage: `url(${!this.props.book.imageLinks ? '' : this.props.book.imageLinks.thumbnail })`
+									backgroundImage: `url(${!this.props.book.imageLinks ? '' : this.props.book.imageLinks.thumbnail})`
 								}}>
 
 									<ShelfControl updateBook={this.props.updateBook} book={this.props.book}/>

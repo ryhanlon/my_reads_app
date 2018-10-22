@@ -38,11 +38,11 @@ class LibraryPage extends Component {
 		return (
 			<div className="list-books">
 
-				<div className="list-books-title">
+				<header className="list-books-title">
 					<h1>MyReads</h1>
-				</div>
+				</header>
 
-				<div className="list-books-content">
+				<main className="list-books-content">
 
 					<Shelf updateBook={this.updateBook}
 						   shelfName="Currently Reading"
@@ -59,7 +59,7 @@ class LibraryPage extends Component {
 						   shelfData={this.state.books.filter(book => book.shelf === "read")}
 					/>
 
-				</div>
+				</main>
 
 				<SearchIcon/>
 
