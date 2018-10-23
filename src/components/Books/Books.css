@@ -31,10 +31,11 @@
 
 .book-title {
     margin-top: 10px;
+    color: white;
 }
 
 .book-authors {
-    color: #999;
+    color: #010101;
 }
 
 .book-top {
