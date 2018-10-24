@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './LibraryPage.css';
 import Shelf from '../Shelf/Shelf.js';
 import SearchIcon from '../SearchIcon/SearchIcon';
@@ -67,5 +68,12 @@ class LibraryPage extends Component {
 		)
 	}
 }
+
+
+LibraryPage.propTypes = {
+	updateBook: PropTypes.func,
+	books: PropTypes.array
+};
+
 
 export default LibraryPage;

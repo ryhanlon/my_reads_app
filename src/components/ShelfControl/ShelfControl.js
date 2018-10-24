@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './ShelfControl.css';
 
 
@@ -22,5 +23,12 @@ class ShelfControl extends Component {
 		)
 	}
 }
+
+
+ShelfControl.propTypes = {
+	book: PropTypes.array,
+	updateBook: PropTypes.func
+};
+
 
 export default ShelfControl;

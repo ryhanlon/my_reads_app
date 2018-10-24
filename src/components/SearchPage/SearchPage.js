@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './SearchPage.css';
 import * as BooksAPI from '../../BooksAPI';
 import Books from "../Books/Books.js";
@@ -101,6 +102,12 @@ class SearchPage extends Component {
 }
 
 
+SearchPage.propTypes = {
+	updateQuery: PropTypes.func,
+	updateBook: PropTypes.func,
+	query: PropTypes.string,
+	results: PropTypes.array
+};
 
 
 export default SearchPage;
