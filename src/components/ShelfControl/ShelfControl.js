@@ -3,15 +3,15 @@ import PropTypes from 'prop-types';
 import './ShelfControl.css';
 
 
-const ShelfControl = (props) => {
+const ShelfControl = ({ book, updateBook}) => {
 	return (
 
 		<div className="book-shelf-changer">
 			<select
-				value={props.book.shelf || "none"}
-				id={props.book.id}
+				value={book.shelf || "none"}
+				id={book.id}
 				onChange={(event) => {
-					props.updateBook(props.book, event.target.value)
+					updateBook(book, event.target.value)
 				}}>
 				<option value="move" disabled>Move to...</option>
 				<option value="currentlyReading">Currently Reading</option>

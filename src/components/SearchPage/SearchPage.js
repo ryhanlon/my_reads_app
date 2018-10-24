@@ -69,6 +69,9 @@ class SearchPage extends Component {
 	};
 
 	render() {
+
+		const { query, results } = this.state;
+
 		return (
 			<div className="search-books">
 
@@ -80,7 +83,7 @@ class SearchPage extends Component {
 						<input
 							type="text"
 							placeholder="Search by title or author"
-							value={this.state.query}
+							value={query}
 							onChange={(event) => this.updateQuery(event.target.value)}
 						/>
 					</div>
@@ -90,7 +93,7 @@ class SearchPage extends Component {
 				< div className = "search-books-results" >
 
 					{
-                  	this.state.results.map((item, key) => <Books updateBook={this.updateBook}
+                  	results.map((item, key) => <Books updateBook={this.updateBook}
 								      book={item}
 									  key={key}/>)
                   	}

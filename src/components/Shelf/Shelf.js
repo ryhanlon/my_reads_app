@@ -4,15 +4,15 @@ import './Shelf.css';
 import Books from "../Books/Books.js";
 
 
-const Shelf = (props) => {
+const Shelf = ({ shelfName, shelfData, updateBook }) => {
 
 	return (
 
 		<section className="bookshelf">
-			<h2 className="bookshelf-title">{props.shelfName}</h2>
+			<h2 className="bookshelf-title">{shelfName}</h2>
 
 			{
-				props.shelfData.map((book, key) => <Books updateBook={props.updateBook} book={book} key={key}/>)
+				shelfData.map((book, key) => <Books updateBook={updateBook} book={book} key={key}/>)
 			}
 
 		</section>

@@ -36,6 +36,9 @@ class LibraryPage extends Component {
 	};
 
 	render() {
+
+		const { books } = this.state;
+
 		return (
 			<div className="list-books">
 
@@ -47,17 +50,17 @@ class LibraryPage extends Component {
 
 					<Shelf updateBook={this.updateBook}
 						   shelfName="Currently Reading"
-						   shelfData={this.state.books.filter(book => book.shelf === "currentlyReading")}
+						   shelfData={books.filter(book => book.shelf === "currentlyReading")}
 					/>
 
 					<Shelf updateBook={this.updateBook}
 						   shelfName="Want to Read"
-						   shelfData={this.state.books.filter(book => book.shelf === "wantToRead")}
+						   shelfData={books.filter(book => book.shelf === "wantToRead")}
 					/>
 
 					<Shelf updateBook={this.updateBook}
 						   shelfName="Read"
-						   shelfData={this.state.books.filter(book => book.shelf === "read")}
+						   shelfData={books.filter(book => book.shelf === "read")}
 					/>
 
 				</main>

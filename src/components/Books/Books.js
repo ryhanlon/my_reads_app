@@ -4,7 +4,7 @@ import './Books.css';
 import ShelfControl from '../ShelfControl/ShelfControl.js';
 
 
-const Books = (props) => {
+const Books = ({ book, updateBook }) => {
 
 	return (
 		<div className="bookshelf-books">
@@ -15,15 +15,15 @@ const Books = (props) => {
 							<div className="book-cover" style={{
 								width: 128,
 								height: 174,
-								backgroundImage: `url(${!props.book.imageLinks ? '' : props.book.imageLinks.thumbnail})`
+								backgroundImage: `url(${!book.imageLinks ? '' : book.imageLinks.thumbnail})`
 							}}>
 
-								<ShelfControl updateBook={props.updateBook} book={props.book}/>
+								<ShelfControl updateBook={updateBook} book={book}/>
 
 							</div>
 
-							<div className="book-title">{props.book.title}</div>
-							<div className="book-authors">{!props.book.authors ? 'No author' : props.book.authors}</div>
+							<div className="book-title">{book.title}</div>
+							<div className="book-authors">{!book.authors ? 'No author' : book.authors}</div>
 						</div>
 					</div>
 				</li>
