@@ -1,32 +1,31 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import './ShelfControl.css';
 
 
-class ShelfControl extends Component {
+const ShelfControl = (props) => {
+	return (
 
-	render() {
-		return (
-
-			<div className="book-shelf-changer">
-				<select
-					value={this.props.book.shelf || "none"}
-					id={this.props.book.id}
-					onChange={(event) => {this.props.updateBook(this.props.book, event.target.value) }}>
-					<option value="move" disabled>Move to...</option>
-					<option value="currentlyReading">Currently Reading</option>
-					<option value="wantToRead">Want to Read</option>
-					<option value="read">Read</option>
-					<option value="none">None</option>
-				</select>
-			</div>
-		)
-	}
-}
+		<div className="book-shelf-changer">
+			<select
+				value={props.book.shelf || "none"}
+				id={props.book.id}
+				onChange={(event) => {
+					props.updateBook(props.book, event.target.value)
+				}}>
+				<option value="move" disabled>Move to...</option>
+				<option value="currentlyReading">Currently Reading</option>
+				<option value="wantToRead">Want to Read</option>
+				<option value="read">Read</option>
+				<option value="none">None</option>
+			</select>
+		</div>
+	)
+};
 
 
 ShelfControl.propTypes = {
-	book: PropTypes.array,
+	book: PropTypes.object,
 	updateBook: PropTypes.func
 };
 

@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './SearchIcon.css';
 import { Link } from 'react-router-dom';
 
 
-class SearchIcon extends Component {
-
-	render() {
+const SearchIcon = () => {
 		return (
 
 			<div className="open-search">
@@ -13,7 +11,8 @@ class SearchIcon extends Component {
 			</div>
 
 		)
-	}
-}
+
+};
+
 
 export default SearchIcon;

@@ -1,40 +1,36 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import './Books.css';
 import ShelfControl from '../ShelfControl/ShelfControl.js';
 
 
-class Books extends Component {
+const Books = (props) => {
 
-	render() {
+	return (
+		<div className="bookshelf-books">
+			<ol className="books-grid">
+				<li>
+					<div className="book">
+						<div className="book-top">
+							<div className="book-cover" style={{
+								width: 128,
+								height: 174,
+								backgroundImage: `url(${!props.book.imageLinks ? '' : props.book.imageLinks.thumbnail})`
+							}}>
 
-		return (
+								<ShelfControl updateBook={props.updateBook} book={props.book}/>
 
-			<div className="bookshelf-books">
-				<ol className="books-grid">
-					<li>
-						<div className="book">
-							<div className="book-top">
-								<div className="book-cover" style={{
-									width: 128,
-									height: 174,
-									backgroundImage: `url(${!this.props.book.imageLinks ? '' : this.props.book.imageLinks.thumbnail})`
-								}}>
-
-									<ShelfControl updateBook={this.props.updateBook} book={this.props.book}/>
-
-								</div>
-
-								<div className="book-title">{this.props.book.title}</div>
-								<div className="book-authors">{!this.props.book.authors ? 'No author' : this.props.book.authors}</div>
 							</div>
+
+							<div className="book-title">{props.book.title}</div>
+							<div className="book-authors">{!props.book.authors ? 'No author' : props.book.authors}</div>
 						</div>
-					</li>
-				</ol>
-			</div>
-		)
-	}
-}
+					</div>
+				</li>
+			</ol>
+		</div>
+	)
+};
 
 
 Books.propTypes = {

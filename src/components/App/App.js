@@ -6,21 +6,17 @@ import SearchPage from '../SearchPage/SearchPage.js';
 import LibraryPage from '../LibraryPage/LibraryPage.js';
 
 
-class BooksApp extends React.Component {
+const BooksApp = () => {
+	return (
 
-  render() {
+		<div className="app">
 
-    return (
+			<Route exact path="/" component={LibraryPage}/>
 
-      <div className="app">
+			<Route exact path="/searchPage" component={SearchPage}/>
+		</div>
+	);
+};
 
-      		<Route exact path="/" component={ LibraryPage } />
-
-            <Route exact path="/searchPage" component={ SearchPage } />
-      </div>
-    );
-  }
-
-}
 
 export default BooksApp
