@@ -10,7 +10,7 @@ const Books = ({ book, updateBook }) => {
 		<div className="bookshelf-books">
 			<ol className="books-grid">
 				<li>
-					<div className="book">
+					<div className="book" tabIndex="0" title={book.title}>
 						<div className="book-top">
 							<div className="book-cover" style={{
 								width: 128,

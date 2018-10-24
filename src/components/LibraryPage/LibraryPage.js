@@ -43,7 +43,7 @@ class LibraryPage extends Component {
 			<div className="list-books">
 
 				<header className="list-books-title">
-					<h1>MyReads</h1>
+					<h1 tabIndex='0'>MyReads</h1>
 				</header>
 
 				<main className="list-books-content">

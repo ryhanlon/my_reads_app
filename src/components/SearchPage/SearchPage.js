@@ -75,17 +75,20 @@ class SearchPage extends Component {
 		return (
 			<div className="search-books">
 
-				<div className="search-books-bar">
+				<div className="search-books-bar" aria-label="search bar">
 
 					<ReturnIcon/>
 
 					<div className="search-books-input-wrapper">
-						<input
-							type="text"
-							placeholder="Search by title or author"
-							value={query}
-							onChange={(event) => this.updateQuery(event.target.value)}
-						/>
+						<label htmlFor="input field">
+							<input
+								type="text"
+								id="input field"
+								placeholder="Search by title or author"
+								value={query}
+								onChange={(event) => this.updateQuery(event.target.value)}
+							/>
+						</label>
 					</div>
 
 				</div>

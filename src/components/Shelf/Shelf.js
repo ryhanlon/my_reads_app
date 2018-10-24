@@ -9,7 +9,7 @@ const Shelf = ({ shelfName, shelfData, updateBook }) => {
 	return (
 
 		<section className="bookshelf">
-			<h2 className="bookshelf-title">{shelfName}</h2>
+			<h2 className="bookshelf-title" tabIndex='0'>{shelfName}</h2>
 
 			{
 				shelfData.map((book, key) => <Books updateBook={updateBook} book={book} key={key}/>)
