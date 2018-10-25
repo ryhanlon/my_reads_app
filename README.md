@@ -62,28 +62,74 @@ The example for the updateBook function was helpful.  I examined the components 
     - [Handling Events](https://reactjs.org/docs/handling-events.html)
     - [DOM Elements](https://reactjs.org/docs/dom-elements.html)
 
+##### Folder Structure Breakdown
+```
+    my-reads_app/
+      docs/
+        imgs/
+        rubric-notes
+        README.md(React)
+      node_modules/
+      package.json
+      public/
+        index.html
+        favicon.ico
+        manifest.json
+      src/
+        components
+           App/
+             App.css
+             App.js
+           Books/
+             Books.js
+             Books.css
+           LibraryPage/
+             LibraryPage.js
+             LibraryPage.css
+           ReturnIcon/
+             ReturnIcon.js
+             ReturnIcon.css
+           SearchIcon/
+             SearchIcon.js
+             SearchIcon.css
+           SearchPage/
+             SearchPage.js
+             SearchPage.css
+           Shelf/
+             Shelf.js
+             Shelf.css
+           ShelfControl/
+             ShelfControl.js
+             ShelfControl.css
+        App.test.js
+        index.css
+        index.js
+        logo.svg
+        icons/
+        BooksAPI.js
+      README.md
+      gitignore
+      yarn.lock
+      package.json
+      package-lock.json
+```
+
 #### Picture of Data and Components Breakdown
-![breakdown](./docs/images/myReadAppOutline.jpg)
+![breakdown](./docs/imgs/myReadAppOutline_v2.jpg)
 
 #### Pictures of Responsive Design
 ##### Phone
 
-![choose game](./docs/img/mobile_200px.png)
+![mobile home page](./docs/imgs/mobile-1.png)
 
-![playing game](./docs/img/mobile2_200px.png)
+![mobile search page](./docs/imgs/mobile-2.png)
 
 ##### Tablet
-![choose game](./docs/img/tablet_350px.png)
+![tablet home page](./docs/imgs/tablet-1.png)
 
-![playing game](./docs/img/tablet2_350px.png)
+![tablet search page](./docs/imgs/tablet-2.png)
 
 ##### Desk Top
-![choose game](./docs/img/desk-top_400px.png)
+![desktop home page](./docs/imgs/desktop-1.png)
 
-![playing game](./docs/img/desk-top2_400px.png)
-
-
-### Future Features
--
-
-
+![desktop search page](./docs/imgs/desktop-2.png)
