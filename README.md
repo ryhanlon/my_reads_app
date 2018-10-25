@@ -51,7 +51,7 @@ This project was built using *Create React App*.  For complete technical details
 Used the following tutorials, articles and docs while building this app.
 
 - *Tutorial Request: FEND Project 6 - Walk Through* by Ryan Waite, [short video](https://www.youtube.com/watch?v=N8bU1oWlLwY&feature=youtu.be) , [long video](https://www.youtube.com/watch?v=acJHkd6K5kI&=&feature=youtu.be)
-The example for the updateBook function was helpful.  I examined the components and where to put state.
+The example for the updateBook function was helpful.  I examined the components breakdown and where to put state.
 
 - The following lessons from the FEND-NanoDegree course:
     - Lesson 3: State Management,
