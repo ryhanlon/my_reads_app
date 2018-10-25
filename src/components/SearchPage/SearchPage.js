@@ -84,6 +84,7 @@ class SearchPage extends Component {
 							<input
 								type="text"
 								id="input field"
+								role="searchbox"
 								placeholder="Search by title or author"
 								value={query}
 								onChange={(event) => this.updateQuery(event.target.value)}

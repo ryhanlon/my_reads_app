@@ -8,7 +8,7 @@ const Shelf = ({ shelfName, shelfData, updateBook }) => {
 
 	return (
 
-		<section className="bookshelf">
+		<section className="bookshelf" aria-label="book shelf">
 			<h2 className="bookshelf-title" tabIndex='0'>{shelfName}</h2>
 
 			{

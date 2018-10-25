@@ -46,7 +46,7 @@ class LibraryPage extends Component {
 					<h1 tabIndex='0'>MyReads</h1>
 				</header>
 
-				<main className="list-books-content">
+				<main className="list-books-content" role="application">
 
 					<Shelf updateBook={this.updateBook}
 						   shelfName="Currently Reading"

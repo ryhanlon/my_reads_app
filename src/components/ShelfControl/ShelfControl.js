@@ -6,7 +6,7 @@ import './ShelfControl.css';
 const ShelfControl = ({ book, updateBook}) => {
 	return (
 
-		<div className="book-shelf-changer">
+		<div className="book-shelf-changer" role="listbox">
 			<select
 				value={book.shelf || "none"}
 				id={book.id}
