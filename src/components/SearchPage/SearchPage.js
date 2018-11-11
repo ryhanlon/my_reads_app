@@ -37,7 +37,7 @@ class SearchPage extends Component {
 		BooksAPI.search(this.state.query.trim())
 			.then(response => {
 				if (response.error) {
-				return this.setState( { result: [] } );
+				return this.setState( { results: [] } );
 			} else {
 				response.forEach(respBook => {
 					// console.log(respBook);

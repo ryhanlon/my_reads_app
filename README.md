@@ -76,7 +76,7 @@ The example for the updateBook function was helpful.  I examined the components 
         favicon.ico
         manifest.json
       src/
-        components
+        components/
            App/
              App.css
              App.js
